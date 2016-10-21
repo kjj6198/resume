@@ -1,0 +1,21 @@
+
+/**
+ * Search given breakpoint map and key (as device)
+ * 
+ * @example
+ * @include breakpoint(mobile) { font-size: 14px; }
+ * => @media screen and (min-width: ($mobile-width)) { font-size: 14px }
+ * 
+ * @param $device [string]
+ * @raise if map or map-key not found.
+ */
+@mixin breakpoint($device) {
+  @if(map-has-key($breakpoint, $device)) {
+    @media screen and (min-width: #{map-get($breakpoint, $device)}) {
+      & { @content; } 
+    }  
+  } @else {
+    @error "Unknown key in $breakpoint map";
+  }
+}
+

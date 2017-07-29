@@ -2,15 +2,18 @@
 <html style='font-size:20px !important'>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>履歷表 — 陳愷奕.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+<title>履歷表 — 陳愷奕</title><style type='text/css'>html, body {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+body { max-width: 960px;margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { background-color: rgb(181, 214, 252); text-shadow: none; background-position: initial initial; background-repeat: initial initial; }
 #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: auto; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  body.typora-export {
+    font-size: 0.8em;
+    padding-left: 8px; padding-right: 8px;
+  }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
 }
@@ -122,404 +125,278 @@ a.md-print-anchor { border: none !important; display: inline-block !important; p
 .MathJax_SVG * { -webkit-transition: none; transition: none; }
 
 
-@include-when-export url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/**
- * css forked from https://github.com/GitbookIO/gitbook
- * www.gitbook.com
- * Apache License
- * https://github.com/GitbookIO/gitbook/blob/master/LICENSE
- **/
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Open Sans Regular'),url('file:///Users/kalan/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff')
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: normal;
-    src: local('Open Sans Italic'),url('file:///Users/kalan/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff')
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: bold;
-    src: local('Open Sans Bold'),url('file:///Users/kalan/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff')
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: bold;
-    src: local('Open Sans Bold Italic'),url('file:///Users/kalan/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff')
-}
-
 html {
-    font-size: 14px;
+  font-size: 19px;
 }
 
+html, body {
+  margin: auto;
+  background: #fefefe;
+}
 body {
-    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
+  font-family: "Vollkorn", Palatino, Times;
+  color: #333;
+  line-height: 1.4;
+  text-align: justify;
+}
+#write {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  line-height: 1.53;
 }
 
-#write{
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 20px 30px 40px 30px;
-	padding-top: 20px;
-    padding-bottom: 100px;
-}
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
+#write>h2:first-child,
+#write>h3:first-child,
+#write>h4:first-child,
+#write>p:first-child{
+  margin-top: 1.2em;
 }
 
-body > *:first-child {
-    margin-top: 0 !important;
+/* Typography
+-------------------------------------------------------- */
+
+#write>h1:first-child,
+h1 {
+  margin-top: 1.6em;
+  font-weight: normal;
 }
-body > *:last-child {
-    margin-bottom: 0 !important;
+
+h1 {
+  font-size:3em;
 }
-a {
-    color: #4183C4;
+
+h2 {
+  margin-top:2em;
+  font-weight: normal;
 }
+
+h3 {
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 3em;
+}
+
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    /*background: url("file:///Users/kalan/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    padding: .2em;
-    font-size: 2.25em;
-    line-height: 1.2;
-    background-color: #27cc95;
-    color: #fff;
-}
-h2 {
-   padding-bottom: .3em;
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
+h3{
+  text-align: center;
 }
 
-h3:before {
-    content: "☞";
+h2:after{
+  border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    height: 1px;
 }
-h4 {
-    font-size: 1.25em;
+
+h1+h2, h2+h3 {
+  margin-top: 0.83em;
 }
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
+
 p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
+.mathjax-block {
+  margin-top: 0;
+  -webkit-hypens: auto;
+  -moz-hypens: auto;
+  hyphens: auto;
 }
-li>ol,
-li>ul {
-    margin: 0 0;
+ul {
+  list-style: square;
+  padding-left: 1.2em;
 }
-hr {
-    height: 4px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-    border-bottom: 1px solid #ddd;
-}
-
-body > h2:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h1:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h1:first-child + h2 {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h3:first-child,
-body > h4:first-child,
-body > h5:first-child,
-body > h6:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-a:first-child h1,
-a:first-child h2,
-a:first-child h3,
-a:first-child h4,
-a:first-child h5,
-a:first-child h6 {
-    margin-top: 0;
-    padding-top: 0;
-}
-h1 p,
-h2 p,
-h3 p,
-h4 p,
-h5 p,
-h6 p {
-    margin-top: 0;
-}
-li p.first {
-    display: inline-block;
-}
-ul,
 ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
+  padding-left: 1.2em;
 }
 blockquote {
-    border-left: 4px solid #dddddd;
-    padding: 0 15px;
-    color: #777777;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #ddd;
 }
-blockquote blockquote {
-    padding-right: 0;
+code,
+pre {
+  font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+  font-size: .9em;
+  background: white;
+}
+.md-fences{
+  margin-left: 1em;
+  padding-left: 1em;
+  border: 1px solid #ddd;
+  padding-bottom: 8px;
+  padding-top: 6px;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: #2484c1;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a img {
+  border: none;
+}
+h1 a,
+h1 a:hover {
+  color: #333;
+  text-decoration: none;
+}
+hr {
+  color: #ddd;
+  height: 1px;
+  margin: 2em 0;
+  border-top: solid 1px #ddd;
+  border-bottom: none;
+  border-left: 0;
+  border-right: 0;
+}
+.md-table-edit {
+  background: #ededed;
+    padding-top: 4px;
 }
 table {
-    padding: 0;
-    word-break: initial;
+  margin-bottom: 1.333333rem
 }
-table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
-    margin: 0;
-    padding: 0;
+table th,
+table td {
+  padding: 8px;
+  line-height: 1.333333rem;
+  vertical-align: top;
+  border-top: 1px solid #ddd
 }
-table tr:nth-child(2n) {
-    background-color: #f8f8f8;
+table th {
+  font-weight: bold
 }
-table tr th {
-    font-weight: bold;
-    border: 1px solid #cccccc;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
+table thead th {
+  vertical-align: bottom
 }
-table tr td {
-    border: 1px solid #cccccc;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0
 }
-table tr th:first-child,
-table tr td:first-child {
-    margin-top: 0;
-}
-table tr th:last-child,
-table tr td:last-child {
-    margin-bottom: 0;
+table tbody+tbody {
+  border-top: 2px solid #ddd
 }
 
-.CodeMirror-gutters {
-    border-right: 1px solid #ddd;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding: 0.2em 1em;
-    padding-top: 8px;
-    padding-bottom: 6px;
-}
 .task-list{
-	padding-left: 0;
+  padding:0;
 }
 
 .task-list-item {
-	padding-left:32px;
+  padding-left: 1.6rem;
 }
 
-.task-list-item input {
-  top: 3px;
-  left: 8px;
+.task-list-item input:before {
+  content: '\221A';
+  display: inline-block;
+  width: 1.33333333rem;
+    height: 1.6rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #ddd;
+  background-color: #fefefe;
 }
 
-@media screen and (min-width: 914px) {
-    /*body {
-        width: 854px;
-        margin: 0 auto;
-    }*/
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before{
+  color: inherit;
 }
-@media print {
-    html {
-        font-size: 13px;
-    }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
-    }
-}
-
-.md-fences {
-	background-color: #f8f8f8;
+.md-tag {
+  color: inherit;
+  font: inherit;
 }
 #write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
+  min-height: 35px;
+  padding: 0.5em 1em;
 }
+#write pre.md-meta-block {
+  white-space: pre;
+  background: #f8f8f8;
+  border: 0px;
+  color: #999;
 
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
+  width: 100vw;
+  max-width: calc(100% + 60px);
+  margin-left: -30px;
+  border-left: 30px #f8f8f8 solid;
+  border-right: 30px #f8f8f8 solid;
 
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
+  margin-bottom: 2em;
+  margin-top: -1.3333333333333rem;
+  padding-top: 26px;
+  padding-bottom: 10px;
+  line-height: 1.8em;
+  font-size: 0.9em;
+  font-size: 0.76em;
+  padding-left: 0;
 }
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
+.md-img-error.md-image>.md-meta{
+  vertical-align: bottom;
 }
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
-
-.md-tag{
-	color: inherit;
+#write>h5.md-focus:before {
+  top: 2px;
 }
 
 .md-toc {
-    margin-top:20px;
-    padding-bottom:20px;
+  margin-top: 40px;
 }
 
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
+.md-toc-content {
+  padding-bottom: 20px;
 }
 
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
+.outline-expander:before {
+  color: inherit;
+  font-size: 14px;
+  top: auto;
+  content: "\f0da";
+  font-family: FontAwesome;
 }
 
-#md-notification:before {
-    top: 10px;
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+    content: "\f0d7";
 }
 
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
+/** source code mode */
+#typora-source {
+  font-family: Courier, monospace;
+    color: #6A6A6A;
 }
 
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
+.cm-s-typora-default .cm-header,
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+  color: #428bca;
 }
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+  color: #777777;
+}
+
 
 
 </style>
 </head>
 <body class='typora-export' >
-<div  id='write'  class = 'is-mac'><h2><a name='header-c5' class='md-header-anchor '></a>履歷表 — 陳愷奕</h2><ul><li><p><strong>姓名：陳愷奕</strong></p></li><li><p>學歷：臺灣科技大學資管系</p></li><li><p>聯絡方式</p><ul><li>email： <a href='mailto:kjj6198@gmail.com' target='_blank' >kjj6198@gmail.com</a>  手機：0905631582</li><li><a href='https://github.com/kjj6198'>Github-kjj6198</a>  <a href='https://www.linkedin.com/in/%E6%84%B7%E5%A5%95-%E9%99%B3-8595b1128/'>LinkedIn-陳愷奕</a>  <a href='https://codepen.io/kjj6198/pens/popular/'>CodePen</a></li></ul></li></ul><h4><a name='header-c24' class='md-header-anchor '></a>工作經歷（共兩年）</h4><ul><li><p><strong>（2015-7 ~ 2016-10）Frontend Developer — <a href='https://www.sudo.com.tw'>Sudo_（服務已關閉）</a></strong></p><ul><li>負責開發主站前端頁面，包含 RWD、配合開發新功能</li><li>建置 Style Guideline，引入 eslint, stylelint 提升程式碼品質 <a href='https://kjj6198.github.io/2016/06/11/legacy-code/'>從 legacy code 中尋找出口</a></li><li>搭配 ReactJS 及 Redux 開發複雜頁面（如履歷編輯、職缺搜尋頁面等）</li></ul></li><li><p><strong>(2016-10 ~ 2017-6) Frontend Developer — <a href='https://tripmoment.com.tw'>時刻旅行</a></strong></p><ul><li>調整版面，包含 RWD</li><li>配合開發新功能（訂閱制、頁面修改、電子報）</li><li>使用 heaven / hubot，建立<a href='https://kjj6198.github.io/2017/03/01/chatops/'>自動化部署流程</a></li></ul></li></ul><h4><a name='header-c54' class='md-header-anchor '></a>技能</h4><ul><li>HTML, Javascript, CSS, SCSS, jQuery</li><li>webpack2 打包前端模組、整合 loader、config 設定</li><li>familiar with ReactJS, Redux, redux-observable, Rxjs</li><li>basic Ruby On Rails knowledge and experience</li><li>basic webGL knowledge</li><li>basic d3js(v4) knowledge and experience</li></ul><h4><a name='header-c74' class='md-header-anchor '></a>專案 / Side Project</h4><ul><li><p><a href='https://www.shurado.com'>日語八百屋</a></p><p>因為喜歡學習日本文化，結合之前摘錄的筆記，再用 email 寄送電子報，目前已經有 1100 多人訂閱。<a href='https://medium.com/%E6%97%A5%E8%AA%9E%E5%85%AB%E7%99%BE%E5%B1%8B'>Medium</a>  <a href='https://www.facebook.com/nipponyaoya/?fref=ts'>粉絲專頁</a></p><ul><li>設計週刊電子報 layout、網頁</li><li>建制開發環境（heroku)</li><li>串接 mailchimp, mailgun API 簡化寄送流程</li></ul></li><li><p><a href='https://kjj6198.github.io/pround-of-labor/app/'>勞動節特輯 — 勞工大代誌</a> （資料視覺化專案）</p><ul><li>勞動節專案，搭配 d3.js 開發，記錄台灣近幾十年來的勞工環境及勞工運動</li></ul></li><li><p><a href='https://github.com/kjj6198/sudo-dbd'>SDBD訂便當（程式碼連結）</a></p><ul><li>解決公司內部訂便當的複雜流程</li><li>每次訂餐都會發起 slack 通知，幫助訂餐者訂餐/點餐</li></ul></li><li><p><a href='https://www.slideshare.net/ssuser732ab9/sitcon-sudo-journey'>Sudo 四重奏（簡報）</a> 總結在公司內部使用的技術與嘗試</p></li><li><p><a href='https://careerdiary.citywanderer.org/'>百工日記</a> 國泰人壽x城市浪人活動頁面，協助開發前端頁面</p></li><li><p><a href='http://ithelp.ithome.com.tw/users/20103565/ironman/1188'>2017 IT 邦幫忙鐵人賽佳作</a> 初探 webGL 與 Three.js</p></li></ul><ul><li><p><a href='http://summer-academy.sudo.com.tw/'>Summer Academy Landing Page</a> 吸引贊助者的 landing page</p></li><li><p><a href='https://github.com/kjj6198/machine-learning-note'>機器學習筆記</a></p><ul><li><a href='https://medium.com/@Shurado/%E6%B7%BA%E8%AB%87%E5%85%A9%E7%A8%AE%E9%99%8D%E7%B6%AD%E6%96%B9%E6%B3%95-pca-%E8%88%87-t-sne-d4254916925b'>淺談兩種降維方法 PCA與 t-SNE</a></li></ul></li></ul></div>
+<div  id='write'  class = 'is-mac'><h2><a name='header-c5' class='md-header-anchor '></a>履歷表 — 陳愷奕<a href="resume-whity.pdf">（PDF 下載）</a></h2><ul><li><p><strong>姓名：陳愷奕</strong></p></li><li><p>學歷：臺灣科技大學資管系</p></li><li><p>聯絡方式</p><ul><li>email： <a href='mailto:kjj6198@gmail.com' target='_blank' >kjj6198@gmail.com</a>  手機：0905631582</li><li><a href='https://github.com/kjj6198'>Github-kjj6198</a>  <a href='https://www.linkedin.com/in/%E6%84%B7%E5%A5%95-%E9%99%B3-8595b1128/'>LinkedIn-陳愷奕</a>  <a href='https://codepen.io/kjj6198/pens/popular/'>CodePen</a></li></ul></li></ul><h4><a name='header-c24' class='md-header-anchor '></a>工作經歷（共兩年）</h4><ul><li><p><strong>（2015-7 ~ 2016-10）Frontend Developer — <a href='https://www.sudo.com.tw'>Sudo_（服務已關閉）</a></strong></p><ul><li>負責開發主站前端頁面，包含 RWD、配合開發新功能</li><li>建置 Style Guideline，引入 eslint, stylelint 提升程式碼品質 <a href='https://kjj6198.github.io/2016/06/11/legacy-code/'>從 legacy code 中尋找出口</a></li><li>搭配 ReactJS 及 Redux 開發複雜頁面（如履歷編輯、職缺搜尋頁面等）</li></ul></li><li><p><strong>(2016-10 ~ 2017-6) Frontend Developer — <a href='https://tripmoment.com.tw'>時刻旅行</a></strong></p><ul><li>調整版面，包含 RWD</li><li>配合開發新功能（訂閱制、頁面修改、電子報）</li><li>使用 heaven / hubot，建立<a href='https://kjj6198.github.io/2017/03/01/chatops/'>自動化部署流程</a></li></ul></li></ul><h4><a name='header-c54' class='md-header-anchor '></a>技能</h4><ul><li>HTML, Javascript, CSS, SCSS, jQuery</li><li>webpack2 打包前端模組、整合 loader、config 設定</li><li>familiar with ReactJS, Redux, redux-observable, Rxjs</li><li>basic Ruby On Rails knowledge and experience</li><li>basic webGL knowledge</li><li>basic d3js(v4) knowledge and experience</li></ul><h4><a name='header-c74' class='md-header-anchor '></a>專案 / Side Project</h4><ul><li><p><a href='https://www.shurado.com'>日語八百屋</a></p><p>因為喜歡學習日本文化，結合之前摘錄的筆記，再用 email 寄送電子報，目前已經有 1100 多人訂閱。<a href='https://medium.com/%E6%97%A5%E8%AA%9E%E5%85%AB%E7%99%BE%E5%B1%8B'>Medium</a>  <a href='https://www.facebook.com/nipponyaoya/?fref=ts'>粉絲專頁</a></p><ul><li>設計週刊電子報 layout、網頁</li><li>建制開發環境（heroku)</li><li>串接 mailchimp, mailgun API 簡化寄送流程</li></ul></li><li><p><a href='https://kjj6198.github.io/pround-of-labor/app/'>勞動節特輯 — 勞工大代誌</a> （資料視覺化專案）</p><ul><li>勞動節專案，搭配 d3.js 開發，記錄台灣近幾十年來的勞工環境及勞工運動</li></ul></li><li><p><a href='https://github.com/kjj6198/sudo-dbd'>SDBD訂便當（程式碼連結）</a></p><ul><li>解決公司內部訂便當的複雜流程</li><li>每次訂餐都會發起 slack 通知，幫助訂餐者訂餐/點餐</li></ul></li><li><p><a href='https://www.slideshare.net/ssuser732ab9/sitcon-sudo-journey'>Sudo 四重奏（簡報）</a> 總結在公司內部使用的技術與嘗試</p></li><li><p><a href='https://careerdiary.citywanderer.org/'>百工日記</a> 國泰人壽x城市浪人活動頁面，協助開發前端頁面</p></li><li><p><a href='http://ithelp.ithome.com.tw/users/20103565/ironman/1188'>2017 IT 邦幫忙鐵人賽佳作</a> 初探 webGL 與 Three.js</p></li></ul><ul><li><p><a href='http://summer-academy.sudo.com.tw/'>Summer Academy Landing Page</a> 吸引贊助者的 landing page</p></li><li><p><a href='https://github.com/kjj6198/machine-learning-note'>機器學習筆記</a></p><ul><li><a href='https://medium.com/@Shurado/%E6%B7%BA%E8%AB%87%E5%85%A9%E7%A8%AE%E9%99%8D%E7%B6%AD%E6%96%B9%E6%B3%95-pca-%E8%88%87-t-sne-d4254916925b'>淺談兩種降維方法 PCA與 t-SNE</a></li></ul></li></ul>
+</div>
 </body>
+<script>
+  function makeTargetBlank(element) {
+    element.setAttribute('target', '_blank');
+  }
+
+  document
+    .querySelectorAll('a')
+    .forEach(makeTargetBlank)
+</script>
 </html>

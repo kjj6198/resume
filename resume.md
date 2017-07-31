@@ -5,7 +5,7 @@
 - 聯絡方式
   - email： kjj6198@gmail.com  手機：0905631582
   - 部落格：[kjj6198.github.io](https://kjj6198.github.io)
-  - [Github-kjj6198](https://github.com/kjj6198)  [LinkedIn-陳愷奕](https://www.linkedin.com/in/%E6%84%B7%E5%A5%95-%E9%99%B3-8595b1128/)  [CodePen](https://codepen.io/kjj6198/pens/popular/)
+  - [Github-kjj6198](https://github.com/kjj6198)  [LinkedIn-陳愷奕](https://www.linkedin.com/in/%E6%84%B7%E5%A5%95-%E9%99%B3-8595b1128/)  [CodePen](https://codepen.io/kjj6198/pens/popular/)  [部落格](https://kjj6198.github.io)
 
 #### 工作經歷（共兩年）
 

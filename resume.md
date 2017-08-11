@@ -15,7 +15,7 @@
   - 建置 Style Guideline，引入 eslint, stylelint 提升程式碼品質 [從 legacy code 中尋找出口](https://kjj6198.github.io/2016/06/11/legacy-code/)
   - 搭配 ReactJS 及 Redux 開發複雜頁面（如履歷編輯、職缺搜尋頁面等）
 
-- **Frontend Developer — [時刻旅行](https://tripmoment.com.tw)**
+- **Frontend Developer — [時刻旅行](https://tripmoment.com)**
 
   - 調整版面，包含 RWD
   - 配合開發新功能（訂閱制、頁面修改、電子報）

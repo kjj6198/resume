@@ -24,6 +24,11 @@
   - 配合開發新功能（訂閱制、頁面修改、電子報）
   - 使用 heaven / hubot，建立[自動化部署流程](https://kjj6198.github.io/2017/03/01/chatops/)
 
+#### 語言測驗
+
+- 日本語能力測驗 JLPT N2
+- 日本語能力測驗 JLPT N3
+
 #### 技能
 
 - `HTML`, `Javascript`, `CSS`, `SCSS`, `jQuery`

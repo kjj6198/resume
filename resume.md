@@ -9,7 +9,12 @@
 
 ---
 
-#### 工作經歷（共兩年）
+#### 工作經歷（共四年）
+
+* **Frontend Engineer — 17 Media**
+  * 開發活動頁面
+  * 維護營運後台、改善文案系統
+  * 開發出帳系統
 
 - **Frontend Developer — [Sudo_（服務已關閉）](https://www.sudo.com.tw)**
 
@@ -31,8 +36,8 @@
 
 #### 技能
 
-- `HTML`, `Javascript`, `CSS`, `SCSS`, `jQuery`
-- `webpack2` 打包前端模組、整合 loader、config 設定
+- `HTML`, `Javascript`, `CSS`, `SCSS`
+- `webpack` 打包前端模組、整合 loader、config 設定
 - familiar with `ReactJS`, `Redux`, `redux-observable`, `Rxjs`, `GraphQL`
 - basic `Ruby On Rails` knowledge and experience
 - basic `webGL` knowledge

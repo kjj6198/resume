@@ -2,7 +2,7 @@
 <html style='font-size:18px !important'>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>resume-jp</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+<title>resume-jp</title><link href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
 iframe { margin: auto; }
@@ -18,6 +18,7 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 @media screen and (max-width: 500px) { 
   body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
 }
@@ -147,293 +148,567 @@ iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 
 
+/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
+
+@include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
+:root {
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
+
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
+}
+
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
+}
+
 html {
-	font-size: 19px;
+	font-size: 16px;
 }
 
 html, body {
-	margin: auto;
-	background: #fefefe;
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
 }
-body {
-	font-family: "Vollkorn", Palatino, Times;
-	color: #333;
-	line-height: 1.4;
-	text-align: justify;
+
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
 }
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
+
 #write {
-	max-width: 960px;
-	margin: 0 auto;
-	margin-bottom: 2em;
-	line-height: 1.53;
-	padding-top: 40px;
+	max-width: 40em;
 }
 
-/* Typography
--------------------------------------------------------- */
-
-#write>h1:first-child,
-h1 {
-	margin-top: 1.6em;
-	font-weight: normal;
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
 }
 
-h1 {
-	font-size:3em;
-}
-
-h2 {
-	margin-top:2em;
-	font-weight: normal;
-}
-
-h3 {
-	font-weight: normal;
-	font-style: italic;
-	margin-top: 3em;
-}
-
-h1, 
-h2, 
-h3{
-	text-align: center;
-}
-
-h2:after{
-	border-bottom: 1px solid #2f2f2f;
-    content: '';
-    width: 100px;
-    display: block;
-    margin: 0 auto;
-    height: 1px;
-}
-
-h1+h2, h2+h3 {
-	margin-top: 0.83em;
-}
-
-p,
-.mathjax-block {
-	margin-top: 0;
-	-webkit-hypens: auto;
-	-moz-hypens: auto;
-	hyphens: auto;
-}
+ol,
 ul {
-	list-style: square;
-	padding-left: 1.2em;
-}
-ol {
-	padding-left: 1.2em;
-}
-blockquote {
-	margin-left: 1em;
-	padding-left: 1em;
-	border-left: 1px solid #ddd;
-}
-code,
-pre {
-	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
-	font-size: .9em;
-	background: white;
-}
-.md-fences{
-	margin-left: 1em;
-	padding-left: 1em;
-	border: 1px solid #ddd;
-	padding-bottom: 8px;
-	padding-top: 6px;
-	margin-bottom: 1.5em;
+	list-style: none;
 }
 
-a {
-	color: #2484c1;
-	text-decoration: none;
+blockquote,
+q {
+	quotes: none;
 }
-a:hover {
-	text-decoration: underline;
-}
-a img {
-	border: none;
-}
-h1 a,
-h1 a:hover {
-	color: #333;
-	text-decoration: none;
-}
-hr {
-	color: #ddd;
-	height: 1px;
-	margin: 2em 0;
-	border-top: solid 1px #ddd;
-	border-bottom: none;
-	border-left: 0;
-	border-right: 0;
-}
-.ty-table-edit {
-	background: #ededed;
-    padding-top: 4px;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
 }
 table {
-	margin-bottom: 1.333333rem
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-table th,
-table td {
-	padding: 8px;
-	line-height: 1.333333rem;
-	vertical-align: top;
-	border-top: 1px solid #ddd
+/* styles */
+
+/* ====== */
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
 }
-table th {
-	font-weight: bold
+h1 {
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
 }
-table thead th {
-	vertical-align: bottom
+h2,
+h3 {
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
 }
-table caption+thead tr:first-child th,
-table caption+thead tr:first-child td,
-table colgroup+thead tr:first-child th,
-table colgroup+thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-	border-top: 0
+h3 {
+	font-weight: normal;
 }
-table tbody+tbody {
-	border-top: 2px solid #ddd
+h4 {
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
+}
+h5,
+h6 {
+	font-size: 1em;
+	/*16*/
+}
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
+}
+/* links */
+
+a {
+	text-decoration: none;
+	color: #065588;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+/* block spacing */
+
+p,
+blockquote,
+.md-fences {
+	margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1.5em;
+}
+/* blockquote */
+
+blockquote {
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
+}
+/* lists */
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+}
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
 }
 
+table {
+	margin-bottom: 1.5em;
+	/*24 / 16*/
+	font-size: 1em;
+	/* width: 100%; */
+}
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
+}
+
+code,
+.md-fences {
+	background-color: #dadada;
+}
+
+code {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.md-fences {
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
+}
+
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+/* some fixes */
+
+h1 {
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+p + ul,
+p + ol{
+	margin-top: .5em;
+}
+
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
+}
+
+li ol>li {
+	list-style-type: lower-alpha;
+}
+
+li li ol>li{
+	list-style-type: lower-roman;
+}
+
+h2,
+h3 {
+	margin-bottom: .75em;
+}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+}
+h1 {
+	border-color: #c5c5c5;
+}
+blockquote {
+	border-color: #bababa;
+	color: #656565;
+}
+
+blockquote ul,
+blockquote ol {
+	margin-left:0;
+}
+
+.ty-table-edit {
+	background-color: transparent;
+}
+thead {
+	background-color: #dadada;
+}
+tr:nth-child(even) {
+	background: #e8e7e7;
+}
+hr {
+	border-color: #c5c5c5;
+}
 .task-list{
-	padding:0;
+	padding-left: 1rem;
 }
 
 .md-task-list-item {
-	padding-left: 1.6rem;
+	padding-left: 1.5rem;
+	list-style-type: none;
 }
 
 .md-task-list-item > input:before {
 	content: '\221A';
 	display: inline-block;
-	width: 1.33333333rem;
+	width: 1.25rem;
   	height: 1.6rem;
 	vertical-align: middle;
 	text-align: center;
 	color: #ddd;
-	background-color: #fefefe;
+	background-color: #F3F2EE;
 }
 
 .md-task-list-item > input:checked:before,
 .md-task-list-item > input[checked]:before{
 	color: inherit;
 }
-.md-tag {
-	color: inherit;
-	font: inherit;
-}
+
 #write pre.md-meta-block {
-	min-height: 35px;
-	padding: 0.5em 1em;
-}
-#write pre.md-meta-block {
-	white-space: pre;
-	background: #f8f8f8;
+	min-height: 1.875rem;
+	color: #555;
 	border: 0px;
-	color: #999;
-	
-	width: 100vw;
-	max-width: calc(100% + 60px);
-	margin-left: -30px;
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
-
-	margin-bottom: 2em;
-	margin-top: -1.3333333333333rem;
-	padding-top: 26px;
-	padding-bottom: 10px;
-	line-height: 1.8em;
-	font-size: 0.9em;
-	font-size: 0.76em;
-	padding-left: 0;
-}
-.md-img-error.md-image>.md-meta{
-	vertical-align: bottom;
-}
-#write>h5.md-focus:before {
-	top: 2px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
 }
 
-.md-toc {
-	margin-top: 40px;
+.md-image>.md-meta {
+	color: #9B5146;
 }
 
-.md-toc-content {
-	padding-bottom: 20px;
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
+}
+
+
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+.md-toc-content:empty:before{
+	color: #065588;
+}
+.md-toc-item {
+	color: #065588;
+}
+#write div.md-toc-tooltip {
+	background-color: #f3f2ee;
+}
+
+#typora-sidebar {
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+}
+
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
+}
+
+.outline-item:hover {
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
+}
+
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
 }
 
 .outline-expander:before {
-	color: inherit;
-	font-size: 14px;
-	top: auto;
-	content: "\f0da";
-	font-family: FontAwesome;
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
 }
 
 .outline-expander:hover:before,
 .outline-item-open>.outline-item>.outline-expander:before {
-  	content: "\f0d7";
+  content: "\f0d7";
 }
 
-/** source code mode */
-#typora-source {
-	font-family: Courier, monospace;
-    color: #6A6A6A;
+.modal-content {
+	background-color: #f3f2ee;
 }
 
-.html-for-mac #typora-sidebar {
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+.auto-suggest-container ul li {
+	list-style-type: none;
 }
 
-.cm-s-typora-default .cm-header, 
-.cm-s-typora-default .cm-property,
-.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
-	color: #428bca;
+/** UI for electron */
+
+.megamenu-menu,
+#top-titlebar, #top-titlebar *,
+.megamenu-content {
+	background: #f3f2ee;
+	color: #1f0909;
 }
 
-.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
-	color: #777777;
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
 }
 
-.typora-node .file-list-item-parent-loc, 
-.typora-node .file-list-item-time, 
-.typora-node .file-list-item-summary {
-	font-family: arial, sans-serif;
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
+}
+
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title:before {
+	color: #1f0909;
+}
+
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
+}
+
+.long-btn:hover {
+	background-color: #e8e7df;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+	background-color: #D2D1D1;
+}
+
+.btn-default {
+	background-color: transparent;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+.ty-show-word-count #footer-word-count {
+	background: #c7c5c5;
+}
+
+#typora-quick-open {
+    background-color: inherit;
+}
+
+.md-diagram-panel {
+	margin-top: 8px;
+}
+
+.file-list-item-file-name {
+	font-weight: initial;
+}
+
+.file-list-item-summary {
+	opacity: 1;
+}
+
+.file-list-item {
+	color: #777;
+}
+
+.file-list-item.active {
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
+}
+
+.file-library-node.active>.file-node-background{
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
+}
+
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
 }
 
 .md-task-list-item>input {
-    margin-left: -1.3em;
-    margin-top: calc(1rem - 12px);
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 12px);
 }
 
-.md-mathjax-midline {
-	background: #fafafa;
+input {
+	border: 1px solid #aaa;
 }
 
-.md-fences .code-tooltip {
-	bottom: -2em !important;
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
 }
 
 .dropdown-menu .divider {
 	border-color: #e5e5e5;
 }
 
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
+}
+
  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style>
 </head>
 <body class='typora-export' >
-<div  id='write'  class = 'is-mac'><h2><a name='header-n0' class='md-header-anchor '></a>履歴書 — Kalan Chen</h2><ul><li><p><strong>名前：陳愷奕（チンカカイ）</strong></p></li><li><p>学歴：台湾科技大学—情報管理部</p></li><li><p>コンタクト：</p><ul><li>メール： <a href='mailto:kjj6198@gmail.com' target='_blank' class='url'>kjj6198@gmail.com</a></li><li>ブログ：<a href='https://kjj6198.github.io'>kjj6198.github.io</a></li><li><a href='https://github.com/kjj6198'>Github</a>  <a href='https://www.linkedin.com/in/%E6%84%B7%E5%A5%95-%E9%99%B3-8595b1128/'>LinkedIn</a></li></ul></li></ul><hr /><h4><a name='header-n160' class='md-header-anchor '></a>職歴（約四年間）</h4><ul><li><p><strong>Frontend Engineer — イチナナ （平成30年9月から〜平成31年9月まで）</strong></p><ul><li>一部のイベントサイト、キャンペーンの開発（ダータ作りとLayout）</li><li>弊社における会計システム開発</li><li>内部に日常に使われる管理システム開発</li><li>イチナナウェブアプリの開発　<a href='https://17.live'>リンク</a></li></ul></li></ul><ul><li><p><strong>Frontend Developer — <a href='https://tripmoment.com'>時刻旅行</a> （平成29年12月から〜平成30年7月まで） </strong></p><ul><li>ページ作り</li><li>新しい機能を開発（EDM）</li><li>heavenとhubot使って、自動的に部署することになりました。</li></ul></li><li><p><strong>Frontend Developer — Sudo Recruit （平成28年7月から〜平成29年10月まで）</strong></p><ul><li>メインサイト開発（RWD、テスト、新しい機能を含め）</li><li>ESLint, Stylelint, Style guide 導入して、ソフトウェア品質を確保する</li><li>ReduxとReactを使って、複雑なページの開発</li></ul></li></ul><h4><a name='header-n144' class='md-header-anchor '></a>スキル</h4><ul><li>Frontend Development</li><li>React, Redux, Webpack</li><li>VueJS 経験あり</li></ul><h4><a name='header-n132' class='md-header-anchor '></a>資格</h4><ul><li>TOEIC スコア 830点</li><li>日本語能力測驗（JLPT） N2</li><li>日本語能力測驗（ JLPT） N3</li></ul><h4><a name='header-n449' class='md-header-anchor '></a>追加情報</h4><ul><li>Medium: <a href='https://medium.com/@Shurado' target='_blank' class='url'>https://medium.com/@Shurado</a></li><li>日本語八百屋：自分で作ったウェブアプリ(<a href='https://www.shurado.com' target='_blank' class='url'>https://www.shurado.com</a>)
+<div  id='write'  class = 'is-mac'><h2><a name='header-n0' class='md-header-anchor '></a>履歴書 — Kalan Chen</h2><ul><li><p><strong>名前：陳愷奕（チンカカイ）</strong></p></li><li><p>学歴：台湾科技大学—情報管理部（Taiwan University Of Science And Technology, Information of management）</p></li><li><p>コンタクト：</p><ul><li>メール： <a href='mailto:kjj6198@gmail.com' target='_blank' class='url'>kjj6198@gmail.com</a></li><li>ブログ：<a href='https://kjj6198.github.io'>kjj6198.github.io</a></li><li><a href='https://github.com/kjj6198'>Github</a>  <a href='https://www.linkedin.com/in/%E6%84%B7%E5%A5%95-%E9%99%B3-8595b1128/'>LinkedIn</a> <a href='https://medium.com/@kalanyei'>Medium</a></li></ul></li></ul><hr /><h4><a name='header-n17' class='md-header-anchor '></a>職歴（約四年間）</h4><ul><li><p><strong>Frontend Engineer — イチナナ （平成30年9月から〜平成31年9月まで）</strong></p><ul><li>一部のイベントサイト、キャンペーンの開発（ダータ作りとLayout）</li><li>弊社における会計システム開発</li><li>内部に日常に使われる管理システム開発</li><li>イチナナウェブアプリの開発　<a href='https://17.live'>リンク</a></li></ul></li><li><p><strong>Frontend Developer — <a href='https://tripmoment.com'>時刻旅行</a> （平成29年12月から〜平成30年7月まで） </strong></p><ul><li>ページ作り</li><li>新しい機能を開発（EDM）</li><li>heavenとhubot使って、自動的に部署することになりました。</li></ul></li><li><p><strong>Frontend Developer — Sudo Recruit （平成28年7月から〜平成29年10月まで）</strong></p><ul><li>メインサイト開発（RWD、テスト、新しい機能を含め）</li><li>ESLint, Stylelint, Style guide 導入して、ソフトウェア品質を確保する</li><li>ReduxとReactを使って、複雑なページの開発</li></ul></li></ul><h4><a name='header-n48' class='md-header-anchor '></a>スキル</h4><ul><li>Web Development(HTML, CSS, Javascript)</li><li>Webpack, GraphQL</li><li>Ruby On Rails</li><li>React, Redux</li><li>VueJS</li></ul><h4><a name='header-n60' class='md-header-anchor '></a>資格</h4><ul><li>TOEIC スコア 830点</li><li>日本語能力測驗（JLPT） N1</li><li>日本語能力測驗（ JLPT） N2</li></ul><h4><a name='header-n68' class='md-header-anchor '></a>追加情報</h4><ul><li>Medium: <a href='https://medium.com/@Shurado' target='_blank' class='url'>https://medium.com/@Shurado</a></li><li>日本語八百屋：自分で作ったウェブアプリ(<a href='https://www.shurado.com' target='_blank' class='url'>https://www.shurado.com</a>)
 日本語の勉強と日本文化について、毎週自分でまとめてメールで送ります。今 2200 以上の読者到達。</li><li>SITCON Sudo_ カルテット：会社で使った技術の紹介(<a href='https://goo.gl/19Xea5' target='_blank' class='url'>https://goo.gl/19Xea5</a>)(中国語のみ)</li><li>《勞工大代誌》 台湾いままでの労働環境について、データビジュアライズした(中国語のみ)
 (<a href='https://goo.gl/1UjUUk' target='_blank' class='url'>https://goo.gl/1UjUUk</a>)</li><li>2017 IT 鐵人邦幫忙佳作 《初探 webGL 與 Three.js》(<a href='https://goo.gl/XyngsY' target='_blank' class='url'>https://goo.gl/XyngsY</a>)
-webGLとThree.jsについて。</li><li>My 2017 Yearly Report <a href='https://kjj6198.github.io/yearly-report' target='_blank' class='url'>https://kjj6198.github.io/yearly-report</a></li></ul><h4><a name='header-n205' class='md-header-anchor '></a>趣味</h4><ul><li><p>ピアノ、キーボード</p><blockquote class="twitter-tweet" data-lang="zh-tw"><p lang="zh" dir="ltr">Roland FA-07 開箱（Demo 是模仿官方的）<a href="https://twitter.com/hashtag/rolandfa07?src=hash&amp;ref_src=twsrc%5Etfw">#rolandfa07</a> <a href="https://t.co/PJ5KdZBnja">pic.twitter.com/PJ5KdZBnja</a></p>— KKalan (@kalanyei) <a href="https://twitter.com/kalanyei/status/1083261525140197376?ref_src=twsrc%5Etfw">2019年1月10日</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li><li><p>料理</p><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-permalink="https://www.instagram.com/p/BfGMYMKlgpH/?utm_source=ig_embed&amp;utm_medium=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/BfGMYMKlgpH/?utm_source=ig_embed&amp;utm_medium=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div><div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> 在 Instagram 查看這則貼文</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BfGMYMKlgpH/?utm_source=ig_embed&amp;utm_medium=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">忘記買九層塔的三杯雞QQ #愷開的料理小教室</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/kaikai_1111/?utm_source=ig_embed&amp;utm_medium=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> 愷開</a>（@kaikai_1111）分享的貼文 於 <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-02-12T12:33:04+00:00">PST 2018 年 2月 月 12 日 上午 4:33</time> 張貼</p></div></blockquote> <script async="" src="//www.instagram.com/embed.js"></script></li></ul></div>
+webGLとThree.jsについて。</li><li>My 2017 Yearly Report <a href='https://kjj6198.github.io/yearly-report' target='_blank' class='url'>https://kjj6198.github.io/yearly-report</a></li></ul><h4><a name='header-n82' class='md-header-anchor '></a>趣味</h4><ul><li>料理、音楽、キーボード</li></ul></div>
 </body>
 </html>

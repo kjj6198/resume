@@ -3,32 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width initial-scale=1" />
-    <title>履歷表 — 陳愷奕</title>
+    <title>resume</title>
     <link
-      href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext"
+      href="https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext"
       rel="stylesheet"
       type="text/css"
     />
     <style type="text/css">
-      .version {
-        position: fixed;
-        right: 1em;
-        top: 1em;
-        padding: 1em;
-        background-color: rgba(125, 125, 125, 0.7);
-        color: #fff;
-      }
-      .version > ul {
-        padding-left: 0;
-      }
-      .version a {
-        color: inherit;
-      }
-
       html {
         overflow-x: initial !important;
       }
-
       :root {
         --bg-color: #ffffff;
         --text-color: #333333;
@@ -36,7 +20,6 @@
         --select-text-font-color: auto;
         --monospace: 'Lucida Console', Consolas, 'Courier', monospace;
       }
-
       html {
         font-size: 14px;
         background-color: var(--bg-color);
@@ -44,7 +27,6 @@
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
       }
-
       body {
         margin: 0px;
         padding: 0px;
@@ -65,27 +47,22 @@
         background-position: inherit inherit;
         background-repeat: inherit inherit;
       }
-
       iframe {
         margin: auto;
       }
-
       a.url {
         word-break: break-all;
       }
-
       a:active,
       a:hover {
         outline: 0px;
       }
-
       .in-text-selection,
       ::selection {
         text-shadow: none;
         background: var(--select-text-bg-color);
         color: var(--select-text-font-color);
       }
-
       #write {
         margin: 0px auto;
         height: auto;
@@ -94,37 +71,40 @@
         word-wrap: break-word;
         position: relative;
         white-space: normal;
-        padding-bottom: 70px;
         overflow-x: visible;
+        padding-top: 40px;
       }
-
-      .first-line-indent #write div,
-      .first-line-indent #write li,
-      .first-line-indent #write p {
+      #write.first-line-indent p {
         text-indent: 2em;
       }
-
-      .first-line-indent #write div :not(p):not(div),
-      .first-line-indent #write div.md-htmlblock-container,
-      .first-line-indent #write p *,
-      .first-line-indent pre {
+      #write.first-line-indent li p,
+      #write.first-line-indent p * {
         text-indent: 0px;
       }
-
+      #write.first-line-indent li {
+        margin-left: 2em;
+      }
       .for-image #write {
         padding-left: 8px;
         padding-right: 8px;
       }
-
       body.typora-export {
         padding-left: 30px;
         padding-right: 30px;
       }
-
+      .typora-export .footnote-line,
+      .typora-export li,
+      .typora-export p {
+        white-space: pre-wrap;
+      }
       @media screen and (max-width: 500px) {
         body.typora-export {
           padding-left: 0px;
           padding-right: 0px;
+        }
+        #write {
+          padding-left: 20px;
+          padding-right: 20px;
         }
         .CodeMirror-sizer {
           margin-left: 0px !important;
@@ -133,31 +113,17 @@
           display: none !important;
         }
       }
-
-      #write > blockquote:first-child,
-      #write > div:first-child,
-      #write > figure:first-child,
-      #write > ol:first-child,
-      #write > p:first-child,
-      #write > pre:first-child,
-      #write > ul:first-child {
-        margin-top: 30px;
-      }
-
       #write li > figure:first-child {
         margin-top: -20px;
       }
-
       #write ol,
       #write ul {
         position: relative;
       }
-
       img {
         max-width: 100%;
         vertical-align: middle;
       }
-
       button,
       input,
       select,
@@ -168,21 +134,19 @@
         font-style: inherit;
         font-variant-caps: inherit;
         font-weight: inherit;
+        font-stretch: inherit;
         line-height: inherit;
       }
-
       input[type='checkbox'],
       input[type='radio'] {
         line-height: normal;
         padding: 0px;
       }
-
       *,
       ::after,
       ::before {
         box-sizing: border-box;
       }
-
       #write h1,
       #write h2,
       #write h3,
@@ -193,7 +157,6 @@
       #write pre {
         width: inherit;
       }
-
       #write h1,
       #write h2,
       #write h3,
@@ -203,7 +166,6 @@
       #write p {
         position: relative;
       }
-
       h1,
       h2,
       h3,
@@ -214,35 +176,27 @@
         break-inside: avoid;
         orphans: 2;
       }
-
       p {
         orphans: 4;
       }
-
       h1 {
         font-size: 2rem;
       }
-
       h2 {
         font-size: 1.8rem;
       }
-
       h3 {
         font-size: 1.6rem;
       }
-
       h4 {
         font-size: 1.4rem;
       }
-
       h5 {
         font-size: 1.2rem;
       }
-
       h6 {
         font-size: 1rem;
       }
-
       .md-math-block,
       .md-rawblock,
       h1,
@@ -255,21 +209,17 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
       }
-
       .hidden {
         display: none;
       }
-
       .md-blockmeta {
         color: rgb(204, 204, 204);
         font-weight: 700;
         font-style: italic;
       }
-
       a {
         cursor: pointer;
       }
-
       sup.md-footnote {
         padding: 2px 4px;
         background-color: rgba(238, 238, 238, 0.701961);
@@ -280,40 +230,33 @@
         border-bottom-left-radius: 4px;
         cursor: pointer;
       }
-
       sup.md-footnote a,
       sup.md-footnote a:hover {
         color: inherit;
         text-transform: inherit;
         text-decoration: inherit;
       }
-
       #write input[type='checkbox'] {
         cursor: pointer;
         width: inherit;
         height: inherit;
       }
-
       figure {
         overflow-x: auto;
         margin: 1.2em 0px;
         max-width: calc(100% + 16px);
         padding: 0px;
       }
-
       figure > table {
         margin: 0px !important;
       }
-
       tr {
         break-inside: avoid;
         break-after: auto;
       }
-
       thead {
         display: table-header-group;
       }
-
       table {
         border-collapse: collapse;
         border-spacing: 0px;
@@ -322,52 +265,40 @@
         break-inside: auto;
         text-align: left;
       }
-
       table.md-table td {
-        min-width: 80px;
+        min-width: 32px;
       }
-
       .CodeMirror-gutters {
         border-right-width: 0px;
         background-color: inherit;
       }
-
       .CodeMirror {
         text-align: left;
       }
-
       .CodeMirror-placeholder {
         opacity: 0.3;
       }
-
       .CodeMirror pre {
         padding: 0px 4px;
       }
-
       .CodeMirror-lines {
         padding: 0px;
       }
-
       div.hr:focus {
         cursor: none;
       }
-
       #write pre {
         white-space: pre-wrap;
       }
-
       #write.fences-no-line-wrapping pre {
         white-space: pre;
       }
-
       #write pre.ty-contain-cm {
         white-space: normal;
       }
-
       .CodeMirror-gutters {
         margin-right: 4px;
       }
-
       .md-fences {
         font-size: 0.9rem;
         display: block;
@@ -385,7 +316,6 @@
         background-position: inherit inherit;
         background-repeat: inherit inherit;
       }
-
       .md-diagram-panel {
         width: 100%;
         margin-top: 10px;
@@ -394,40 +324,32 @@
         padding-bottom: 8px;
         overflow-x: auto;
       }
-
       #write .md-fences.mock-cm {
         white-space: pre-wrap;
       }
-
       .md-fences.md-fences-with-lineno {
         padding-left: 0px;
       }
-
       #write.fences-no-line-wrapping .md-fences.mock-cm {
         white-space: pre;
         overflow-x: auto;
       }
-
       .md-fences.mock-cm.md-fences-with-lineno {
         padding-left: 8px;
       }
-
       .CodeMirror-line,
       twitterwidget {
         break-inside: avoid;
       }
-
       .footnotes {
         opacity: 0.8;
         font-size: 0.9rem;
         margin-top: 1em;
         margin-bottom: 1em;
       }
-
       .footnotes + .footnotes {
         margin-top: 0px;
       }
-
       .md-reset {
         margin: 0px;
         padding: 0px;
@@ -450,45 +372,36 @@
         background-position: 0px 0px;
         background-repeat: initial initial;
       }
-
       li div {
         padding-top: 0px;
       }
-
       blockquote {
         margin: 1rem 0px;
       }
-
       li .mathjax-block,
       li p {
         margin: 0.5rem 0px;
       }
-
       li {
         margin: 0px;
         position: relative;
       }
-
       blockquote > :last-child {
         margin-bottom: 0px;
       }
-
       blockquote > :first-child,
       li > :first-child {
         margin-top: 0px;
       }
-
       .footnotes-area {
         color: rgb(136, 136, 136);
         margin-top: 0.714rem;
         padding-bottom: 0.143rem;
         white-space: normal;
       }
-
       #write .footnote-line {
         white-space: pre-wrap;
       }
-
       @media print {
         body,
         html {
@@ -499,6 +412,7 @@
         }
         #write {
           margin-top: 0px;
+          padding-top: 0px;
           border-color: transparent !important;
         }
         .typora-export * {
@@ -508,8 +422,8 @@
           font-size: 13px;
         }
         .typora-export #write {
-          padding-left: 1cm;
-          padding-right: 1cm;
+          padding-left: 32px;
+          padding-right: 32px;
           padding-bottom: 0px;
           break-after: avoid-page;
         }
@@ -520,17 +434,14 @@
           margin: 20mm 0px;
         }
       }
-
       .footnote-line {
         margin-top: 0.714em;
         font-size: 0.7em;
       }
-
       a img,
       img a {
         cursor: pointer;
       }
-
       pre.md-meta-block {
         font-size: 0.8rem;
         min-height: 0.8rem;
@@ -541,45 +452,36 @@
         background-position: initial initial;
         background-repeat: initial initial;
       }
-
+      p > .md-image:only-child:not(.md-img-error) img,
       p > img:only-child {
         display: block;
         margin: auto;
       }
-
       p > .md-image:only-child {
         display: inline-block;
         width: 100%;
-        text-align: center;
       }
-
       #write .MathJax_Display {
         margin: 0.8em 0px 0px;
       }
-
       .md-math-block {
         width: 100%;
       }
-
       .md-math-block:not(:empty)::after {
         display: none;
       }
-
       [contenteditable='true']:active,
       [contenteditable='true']:focus {
         outline: 0px;
         box-shadow: none;
       }
-
       .md-task-list-item {
         position: relative;
         list-style-type: none;
       }
-
       .task-list-item.md-task-list-item {
         padding-left: 0px;
       }
-
       .md-task-list-item > input {
         position: absolute;
         top: 0px;
@@ -587,11 +489,9 @@
         margin-left: -1.2em;
         margin-top: calc(1em - 10px);
       }
-
       .math {
         font-size: 1rem;
       }
-
       .md-toc {
         min-height: 3.58rem;
         position: relative;
@@ -601,59 +501,47 @@
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
       }
-
       .md-toc-content {
         position: relative;
         margin-left: 0px;
       }
-
       .md-toc-content::after,
       .md-toc::after {
         display: none;
       }
-
       .md-toc-item {
         display: block;
         color: rgb(65, 131, 196);
       }
-
       .md-toc-item a {
         text-decoration: none;
       }
-
       .md-toc-inner:hover {
+        text-decoration: underline;
       }
-
       .md-toc-inner {
         display: inline-block;
         cursor: pointer;
       }
-
       .md-toc-h1 .md-toc-inner {
         margin-left: 0px;
         font-weight: 700;
       }
-
       .md-toc-h2 .md-toc-inner {
         margin-left: 2em;
       }
-
       .md-toc-h3 .md-toc-inner {
         margin-left: 4em;
       }
-
       .md-toc-h4 .md-toc-inner {
         margin-left: 6em;
       }
-
       .md-toc-h5 .md-toc-inner {
         margin-left: 8em;
       }
-
       .md-toc-h6 .md-toc-inner {
         margin-left: 10em;
       }
-
       @media screen and (max-width: 48em) {
         .md-toc-h3 .md-toc-inner {
           margin-left: 3.5em;
@@ -668,33 +556,27 @@
           margin-left: 8em;
         }
       }
-
       a.md-toc-inner {
         font-size: inherit;
         font-style: inherit;
         font-weight: inherit;
         line-height: inherit;
       }
-
       .footnote-line a:not(.reversefootnote) {
         color: inherit;
       }
-
       .md-attr {
         display: none;
       }
-
       .md-fn-count::after {
         content: '.';
       }
-
       code,
       pre,
       samp,
       tt {
         font-family: var(--monospace);
       }
-
       kbd {
         margin: 0px 0.1em;
         padding: 0.1em 0.6em;
@@ -713,17 +595,14 @@
         background-position: initial initial;
         background-repeat: initial initial;
       }
-
       .md-comment {
         color: rgb(162, 127, 3);
         opacity: 0.8;
         font-family: var(--monospace);
       }
-
       code {
         text-align: left;
       }
-
       a.md-print-anchor {
         white-space: pre !important;
         border: none !important;
@@ -736,11 +615,12 @@
         background-position: 0px 0px !important;
         background-repeat: initial initial !important;
       }
-
       .md-inline-math .MathJax_SVG .noError {
         display: none !important;
       }
-
+      .html-for-mac .inline-math-svg .MathJax_SVG {
+        vertical-align: 0.2px;
+      }
       .md-math-block .MathJax_SVG_Display {
         text-align: center;
         margin: 0px;
@@ -754,22 +634,18 @@
         overflow-y: hidden;
         display: block !important;
       }
-
       .MathJax_SVG_Display,
       .md-inline-math .MathJax_SVG_Display {
         width: auto;
         margin: inherit;
         display: inline-block !important;
       }
-
       .MathJax_SVG .MJX-monospace {
         font-family: var(--monospace);
       }
-
       .MathJax_SVG .MJX-sans-serif {
         font-family: sans-serif;
       }
-
       .MathJax_SVG {
         display: inline;
         font-style: normal;
@@ -793,90 +669,49 @@
         padding: 0px;
         margin: 0px;
       }
-
       .MathJax_SVG * {
         transition: none;
       }
-
+      .MathJax_SVG_Display svg {
+        vertical-align: middle !important;
+        margin-bottom: 0px !important;
+      }
       .os-windows.monocolor-emoji .md-emoji {
         font-family: 'Segoe UI Symbol', sans-serif;
       }
-
       .md-diagram-panel > svg {
         max-width: 100%;
       }
-
       [lang='mermaid'] svg,
       [lang='flow'] svg {
         max-width: 100%;
       }
-
       [lang='mermaid'] .node text {
         font-size: 1rem;
       }
-
       table tr th {
         border-bottom-width: 0px;
       }
-
       video {
         max-width: 100%;
         display: block;
         margin: 0px auto;
       }
-
       iframe {
         max-width: 100%;
         width: 100%;
         border: none;
       }
-
       .highlight td,
       .highlight tr {
         border: 0px;
       }
 
-      :root {
-        --rawblock-edit-panel-bd: #e5e5e5;
-      }
-
       /* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
 
-      @include-when-export url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+      @include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
 
       /* =========== */
-
-      @font-face {
-        font-family: 'PT Serif';
-        font-style: normal;
-        font-weight: normal;
-        src: local('PT Serif'), local('PTSerif-Regular'),
-          url(file:///Users/kalan/Library/Application%20Support/abnerworks.Typora/themes/newsprint/PT_Serif-Web-Regular.ttf);
-      }
-
-      @font-face {
-        font-family: 'PT Serif';
-        font-style: italic;
-        font-weight: normal;
-        src: local('PT Serif'), local('PTSerif-Italic'),
-          url('file:///Users/kalan/Library/Application%20Support/abnerworks.Typora/themes/newsprint/PT_Serif-Web-Italic.ttf');
-      }
-
-      @font-face {
-        font-family: 'PT Serif';
-        font-style: normal;
-        font-weight: bold;
-        src: local('PT Serif'), local('PTSerif-Bold'),
-          url('file:///Users/kalan/Library/Application%20Support/abnerworks.Typora/themes/newsprint/PT_Serif-Web-Bold.ttf');
-      }
-
-      @font-face {
-        font-family: 'PT Serif';
-        font-style: italic;
-        font-weight: bold;
-        src: local('PT Serif'), local('PTSerif-BoldItalic'),
-          url('file:///Users/kalan/Library/Application%20Support/abnerworks.Typora/themes/newsprint/PT_Serif-Web-BoldItalic.ttf');
-      }
 
       :root {
         --active-file-bg-color: #dadada;
@@ -884,6 +719,8 @@
         --active-file-text-color: white;
         --bg-color: #f3f2ee;
         --text-color: #1f0909;
+        --control-text-color: #444;
+        --rawblock-edit-panel-bd: #e5e5e5;
 
         --select-text-bg-color: rgba(32, 43, 51, 0.63);
         --select-text-font-color: white;
@@ -901,7 +738,7 @@
       html,
       body {
         background-color: #f3f2ee;
-        font-family: 'PT Serif', 'Times New Roman', Times;
+        font-family: 'PT Serif', 'Times New Roman', Times, serif;
         color: #1f0909;
         line-height: 1.5em;
       }
@@ -928,7 +765,6 @@
         list-style-type: decimal;
         list-style-position: outside;
       }
-
       ul li {
         list-style-type: disc;
         list-style-position: outside;
@@ -943,7 +779,6 @@
       q {
         quotes: none;
       }
-
       blockquote:before,
       blockquote:after,
       q:before,
@@ -951,12 +786,10 @@
         content: '';
         content: none;
       }
-
       table {
         border-collapse: collapse;
         border-spacing: 0;
       }
-
       /* styles */
 
       /* ====== */
@@ -971,7 +804,6 @@
       h6 {
         font-weight: bold;
       }
-
       h1 {
         font-size: 1.875em;
         /*30 / 16*/
@@ -979,7 +811,6 @@
         /* 48 / 30*/
         margin-top: 2em;
       }
-
       h2,
       h3 {
         font-size: 1.3125em;
@@ -991,42 +822,35 @@
         margin-bottom: 1.15em;
         /*24 / 21*/
       }
-
       h3 {
         font-weight: normal;
       }
-
       h4 {
         font-size: 1.125em;
         /*18 / 16*/
         margin-top: 2.67em;
         /*48 / 18*/
       }
-
       h5,
       h6 {
         font-size: 1em;
         /*16*/
       }
-
       h1 {
         border-bottom: 1px solid;
         margin-bottom: 1.875em;
         padding-bottom: 0.8125em;
       }
-
       /* links */
 
       a {
         text-decoration: none;
         color: #065588;
       }
-
       a:hover,
       a:active {
         text-decoration: underline;
       }
-
       /* block spacing */
 
       p,
@@ -1034,7 +858,6 @@
       .md-fences {
         margin-bottom: 1.5em;
       }
-
       h1,
       h2,
       h3,
@@ -1043,7 +866,6 @@
       h6 {
         margin-bottom: 1.5em;
       }
-
       /* blockquote */
 
       blockquote {
@@ -1052,14 +874,12 @@
         margin-left: 2em;
         padding-left: 1em;
       }
-
       /* lists */
 
       ul,
       ol {
         margin: 0 0 1.5em 1.5em;
       }
-
       /* tables */
       .md-meta,
       .md-before,
@@ -1073,17 +893,14 @@
         font-size: 1em;
         /* width: 100%; */
       }
-
       thead th,
       tfoot th {
         padding: 0.25em 0.25em 0.25em 0.4em;
         text-transform: uppercase;
       }
-
       th {
         text-align: left;
       }
-
       td {
         vertical-align: top;
         padding: 0.25em 0.25em 0.25em 0.4em;
@@ -1092,13 +909,18 @@
       code,
       .md-fences {
         background-color: #dadada;
-        padding-left: 1ch;
-        padding-right: 1ch;
+      }
+
+      code {
+        padding-left: 2px;
+        padding-right: 2px;
       }
 
       .md-fences {
         margin-left: 2em;
         margin-bottom: 3em;
+        padding-left: 1ch;
+        padding-right: 1ch;
       }
 
       pre,
@@ -1107,7 +929,6 @@
         font-size: 0.875em;
         line-height: 1.714285em;
       }
-
       /* some fixes */
 
       h1 {
@@ -1118,7 +939,7 @@
 
       p + ul,
       p + ol {
-        margin-top: -1em;
+        margin-top: 0.5em;
       }
 
       h3 + ul,
@@ -1135,45 +956,52 @@
       li > ul,
       li > ol {
         margin-top: inherit;
+        margin-bottom: 0;
+      }
+
+      li ol > li {
+        list-style-type: lower-alpha;
+      }
+
+      li li ol > li {
+        list-style-type: lower-roman;
       }
 
       h2,
       h3 {
         margin-bottom: 0.75em;
       }
-
       hr {
         border-top: none;
         border-right: none;
         border-bottom: 1px solid;
         border-left: none;
       }
-
       h1 {
         border-color: #c5c5c5;
       }
-
       blockquote {
         border-color: #bababa;
         color: #656565;
       }
 
+      blockquote ul,
+      blockquote ol {
+        margin-left: 0;
+      }
+
       .ty-table-edit {
         background-color: transparent;
       }
-
       thead {
         background-color: #dadada;
       }
-
       tr:nth-child(even) {
         background: #e8e7e7;
       }
-
       hr {
         border-color: #c5c5c5;
       }
-
       .task-list {
         padding-left: 1rem;
       }
@@ -1215,8 +1043,7 @@
 
       .md-image > .md-meta {
         font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New',
-          'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei',
-          sans-serif;
+          'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
       }
 
       #write > h3.md-focus:before {
@@ -1224,21 +1051,18 @@
         color: #999;
         border-color: #999;
       }
-
       #write > h4.md-focus:before {
         left: -1.5rem;
         top: 0.25rem;
         color: #999;
         border-color: #999;
       }
-
       #write > h5.md-focus:before {
         left: -1.5rem;
         top: 0.3125rem;
         color: #999;
         border-color: #999;
       }
-
       #write > h6.md-focus:before {
         left: -1.5rem;
         top: 0.3125rem;
@@ -1253,11 +1077,9 @@
       .md-toc-content:empty:before {
         color: #065588;
       }
-
       .md-toc-item {
         color: #065588;
       }
-
       #write div.md-toc-tooltip {
         background-color: #f3f2ee;
       }
@@ -1331,7 +1153,7 @@
       .context-menu,
       .megamenu-content,
       footer {
-        font-family: 'PT Serif', 'Times New Roman', Times;
+        font-family: 'PT Serif', 'Times New Roman', Times, serif;
         color: #1f0909;
       }
 
@@ -1371,7 +1193,7 @@
       }
 
       .typora-sourceview-on #toggle-sourceview-btn,
-      .show-word-count #footer-word-count {
+      .ty-show-word-count #footer-word-count {
         background: #c7c5c5;
       }
 
@@ -1437,13 +1259,24 @@
         color: inherit;
       }
 
+      .dropdown-menu .divider {
+        border-color: #e5e5e5;
+      }
+
+      /* https://github.com/typora/typora-issues/issues/2046 */
+      .os-windows-7 strong,
+      .os-windows-7 strong {
+        font-weight: 760;
+      }
+
+      .typora-export li,
       .typora-export p,
-      .typora-export .footnote-line {
+      .typora-export,
+      .footnote-line {
         white-space: normal;
       }
     </style>
   </head>
-
   <body class="typora-export">
     <div id="write" class="is-mac">
       <h2><a name="header-n0" class="md-header-anchor "></a>履歷表 — 陳愷奕</h2>
@@ -1645,19 +1478,5 @@
         </li>
       </ul>
     </div>
-    <div class="version">
-      <ul>
-        <li><a href="./resume-en.html">English</a></li>
-        <li><a href="./resume-jp.html">日本語</a></li>
-      </ul>
-    </div>
   </body>
-  <script>
-    function makeTargetBlank(element) {
-      element.setAttribute('target', '_blank');
-      element.setAttribute('rel', 'noopener nofollow');
-    }
-
-    document.querySelectorAll('a').forEach(makeTargetBlank);
-  </script>
 </html>
